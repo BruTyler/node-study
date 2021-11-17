@@ -49,7 +49,7 @@ const emitterObject = new EventEmitter();
 emitterObject.on(EventType.expired, Handler.stopTimer);
 emitterObject.on(EventType.tick, Handler.tick);
 
-const rawEndDates = process.argv.slice(2)//['20-08-23-17-11-2021', '20-08-23-17-12-2021',]//Number(process.argv.slice(2))
+const rawEndDates = process.argv.slice(2)
 const endDates = rawEndDates.map(buildDate)
 endDates.forEach(buildTimer)
 
